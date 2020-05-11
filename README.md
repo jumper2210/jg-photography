@@ -1,4 +1,4 @@
-### Justyna G Photography
+# Justyna G Photography
 This is business card website made for Justyna Garbal Photography.
 (In progress...)
 ## Technologies
@@ -6,7 +6,7 @@ This is business card website made for Justyna Garbal Photography.
 - JS/ES6
 - Sass
 - & Other
-# Live
+### Live
 currently in progress
-# Author
+### Author
 Krzysztof Skoczek
