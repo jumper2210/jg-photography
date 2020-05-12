@@ -1,7 +1,52 @@
 @import "../../sass/variables";
+@import "../../sass/animations";
 .header {
   height: 97vh;
   position: relative;
   background-image: $backgroundOfHeader;
   background-position: center;
+  &__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+}
+
+.button-scroll {
+  position: absolute;
+  top: 78%;
+  left: 45%;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 1.2rem;
+  box-shadow: inset 0 0 0 0.3rem rgba(255, 255, 255, 0.596);
+  color: $color-white;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.9rem;
+  font-weight: 700;
+  height: 4.75rem;
+  letter-spacing: 0.125em;
+  line-height: 4.75rem;
+  padding: 0 2rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  animation: up 1s ease-out 1.45s;
+  animation-fill-mode: backwards;
+  &::after {
+    background: $color-white;
+    content: "";
+    height: 20vh;
+    left: 50%;
+    position: absolute;
+    top: 100%;
+    width: 0.01rem;
+  }
+  &:hover {
+    background-color: rgba(158, 158, 158, 0.26);
+  }
 }

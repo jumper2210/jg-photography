@@ -1,6 +1,31 @@
 import React from "react";
 import "./Header.scss";
-const Header = (props) => {
-  return <section className="header"></section>;
-};
+import "../../sass/_typography.scss";
+import { Link } from "react-scroll";
+const Header = React.memo((props) => {
+  return (
+    <section className="header">
+      <div className="header__text-box">
+        <h1 className="heading-primary">
+          <span className="heading-primary--main">Justyna Garbal</span>
+          <span className="heading-primary--sub">
+            Professional Photographer
+          </span>
+        </h1>
+      </div>
+      <Link
+        to={""}
+        spy={true}
+        smooth={true}
+        hashSpy={true}
+        duration={1500}
+        isDynamic={true}
+        offset={-30}
+        ignoreCancelEvents={false}
+      >
+        <span className="button-scroll"> meet me</span>
+      </Link>
+    </section>
+  );
+});
 export default Header;

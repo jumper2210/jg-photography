@@ -3,9 +3,9 @@ import NavigationItems from "../NavigationItems/NavigationItems";
 import "../Toolbar/Toolbar.scss";
 const Toolbar = (props) => {
   return (
-    <span className="toolbar">
+    <div className="toolbar">
       <NavigationItems />
-    </span>
+    </div>
   );
 };
 export default Toolbar;
