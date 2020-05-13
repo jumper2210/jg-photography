@@ -35,12 +35,12 @@
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
-  animation: up 1s ease-out 1.45s;
+  animation: up 1.4s ease-out 1.6s;
   animation-fill-mode: backwards;
   &::after {
     background: $color-white;
     content: "";
-    height: 20vh;
+    height: 17vh;
     left: 50%;
     position: absolute;
     top: 100%;

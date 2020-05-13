@@ -30,3 +30,35 @@ body {
     animation-timing-function: ease-in-out;
   }
 }
+
+.heading-secondary {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 15%;
+  left: 50%;
+  color: $color-white;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  font-weight: 300;
+  font-size: 3.4rem;
+  letter-spacing: 0.5rem;
+}
+
+.heading-opinions {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 15%;
+  left: 50%;
+  margin: 0 auto;
+  font-size: 3rem;
+  letter-spacing: 0.4rem;
+}
+
+.paragraph-opinions {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 45%;
+  left: 50%;
+  font-size: 2rem;
+  margin: 0 auto;
+}

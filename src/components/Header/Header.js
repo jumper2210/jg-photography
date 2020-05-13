@@ -14,7 +14,7 @@ const Header = React.memo((props) => {
         </h1>
       </div>
       <Link
-        to={""}
+        to={"opinions"}
         spy={true}
         smooth={true}
         hashSpy={true}
