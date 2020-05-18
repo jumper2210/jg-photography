@@ -9,11 +9,10 @@ const Opinions = React.memo((props) => {
     autoplaySpeed: 3000,
     pauseOnHover: true,
     adaptiveHeight: true,
-    wheel: true,
     duration: 500,
   };
   return (
-    <section className="opinions">
+    <section className="opinions" id="opinions">
       <h2 className="heading-secondary">Co o mnie mówią</h2>
       <Slider className="box" {...settings}>
         <section className="box__of-text">

@@ -4,7 +4,7 @@ import "../../sass/_typography.scss";
 import { Link } from "react-scroll";
 const Header = React.memo((props) => {
   return (
-    <section className="header">
+    <section className="header" ref={props.headerRef}>
       <div className="header__text-box">
         <h1 className="heading-primary">
           <span className="heading-primary--main">Justyna Garbal</span>
@@ -25,6 +25,7 @@ const Header = React.memo((props) => {
       >
         <span className="button-scroll"> meet me</span>
       </Link>
+      {props.children}
     </section>
   );
 });

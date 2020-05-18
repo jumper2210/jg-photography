@@ -5,6 +5,12 @@
   left: 0%;
   padding: 5.5rem 0rem 5.5rem 0rem;
   text-align: center;
-  z-index: 1;
+  z-index: 3;
   overflow: hidden;
+  transition: all 0.2s ease-in-out;
+  margin: auto 0.7rem;
+  &--hide {
+    // background-color: rgb(195, 195, 195);
+    position: fixed;
+  }
 }
