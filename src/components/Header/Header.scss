@@ -5,6 +5,7 @@
   position: relative;
   background-image: $backgroundOfHeader;
   background-position: center;
+  background-size: auto, cover;
   &__text-box {
     position: absolute;
     top: 40%;

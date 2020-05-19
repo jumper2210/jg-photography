@@ -1,26 +1,9 @@
 .banner {
-  background-image: url("../../assets/images/OLA.JPG");
-  height: 50%;
-  background-position: right;
-  // background-image: -webkit-gradient(
-  //     linear,
-  //     left top,
-  //     right bottom,
-  //     from(rgba(190, 209, 186, 0.8)),
-  //     to(rgba(87, 100, 96, 0.8))
-  //   ),
-  //   url("../../assets/images/opinionPic.jpg");
-
-  // background-image: linear-gradient(
-  //     to right bottom,
-  //     from(rgba(190, 209, 186, 0.8)),
-  //     to(rgba(87, 100, 96, 0.8))
-  //   ),
-  //   url(../../assets/images/opinionPic.jpg);
-  background-position: center;
-  background-attachment: scroll;
-  padding: 20rem 0 30rem 0;
   position: relative;
   top: 0;
   left: 0;
+  &__pic {
+    height: 65rem;
+    padding-top: 0rem;
+  }
 }
