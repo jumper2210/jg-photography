@@ -1,0 +1,20 @@
+.about {
+  margin: 0 0.5rem;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  height: 60rem;
+  &__of-picture {
+    width: 50%;
+    background-color: #fcf;
+  }
+  &__of-text {
+    background-color: #fcf;
+    width: 50%;
+  }
+}

@@ -1,9 +1,12 @@
 .banner {
+  margin: 0 0.5rem;
+  padding-top: 1rem;
   position: relative;
   top: 0;
   left: 0;
+  z-index: -1;
   &__pic {
-    height: 65rem;
-    padding-top: 0rem;
+    height: 70rem;
+    width: 100%;
   }
 }

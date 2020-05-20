@@ -5,6 +5,8 @@ import Aux from "../../hoc/Auxiliary/Auxiliary";
 import Banner from "../Banner/Banner";
 import Opinions from "../Opinions/Opinions";
 import Gallery from "../Gallery/Gallery";
+import BannerSec from "../BannerSec/BannerSec";
+import About from "../About/About";
 const Layout = (props) => {
   const [scrollY, setScrollY] = useState(0);
   const [opinionSection, setOpinionSection] = useState(false);
@@ -59,10 +61,11 @@ const Layout = (props) => {
           hideToolbar={ejectToolbar}
         />
       </Header>
-
       <Opinions />
       <Banner />
       <Gallery />
+      <BannerSec />
+      <About />
     </Aux>
   );
 };
