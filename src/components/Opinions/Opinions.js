@@ -2,7 +2,7 @@ import React from "react";
 import "./Opinions.scss";
 import Slider from "infinite-react-carousel";
 
-const Opinions = React.memo((props) => {
+const Opinions = (props) => {
   const settings = {
     dots: true,
     autoplay: true,
@@ -34,5 +34,5 @@ const Opinions = React.memo((props) => {
       </Slider>
     </section>
   );
-});
-export default Opinions;
+};
+export default React.memo(Opinions);

@@ -12,4 +12,4 @@ const Toolbar = (props) => {
     </div>
   );
 };
-export default Toolbar;
+export default React.memo(Toolbar);

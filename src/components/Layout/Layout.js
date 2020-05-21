@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Header from "../Header/Header";
 import Toolbar from "../../containers/Toolbar/Toolbar";
-import Aux from "../../hoc/Auxiliary/Auxiliary";
 import Banner from "../Banner/Banner";
 import Opinions from "../Opinions/Opinions";
 import Gallery from "../Gallery/Gallery";
@@ -53,7 +52,7 @@ const Layout = (props) => {
   }, [setOpinionSection, scrollY]);
 
   return (
-    <Aux>
+    <React.Fragment>
       <Header headerRef={headerRef}>
         <Toolbar
           toolbarRef={toolbarRef}
@@ -66,7 +65,7 @@ const Layout = (props) => {
       <Gallery />
       <BannerSec />
       <About />
-    </Aux>
+    </React.Fragment>
   );
 };
 export default Layout;

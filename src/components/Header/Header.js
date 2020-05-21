@@ -2,7 +2,7 @@ import React from "react";
 import "./Header.scss";
 import "../../sass/_typography.scss";
 import { Link } from "react-scroll";
-const Header = React.memo((props) => {
+const Header = (props) => {
   return (
     <section className="header" ref={props.headerRef}>
       <div className="header__text-box">
@@ -28,5 +28,5 @@ const Header = React.memo((props) => {
       {props.children}
     </section>
   );
-});
-export default Header;
+};
+export default React.memo(Header);

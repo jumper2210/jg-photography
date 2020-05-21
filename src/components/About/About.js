@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.scss";
-const About = React.memo((props) => {
+const About = (props) => {
   return (
     <section className="about">
       <div className="box">
@@ -9,5 +9,5 @@ const About = React.memo((props) => {
       </div>
     </section>
   );
-});
-export default About;
+};
+export default React.memo(About);
