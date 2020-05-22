@@ -5,6 +5,7 @@ import { Link } from "react-scroll";
 const Header = (props) => {
   return (
     <section className="header" ref={props.headerRef}>
+      <span className="header__picture" />
       <div className="header__text-box">
         <h1 className="heading-primary">
           <span className="heading-primary--main">Justyna Garbal</span>

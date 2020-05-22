@@ -1,18 +1,9 @@
 @import "../../sass/variables";
 @import "../../sass/animations";
 .header {
-  // margin: 0.5rem;
   height: 97vh;
   position: relative;
-  background-image: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(0, 0, 0, 0.287) 49%,
-      rgba(255, 255, 255, 0) 100%
-    ),
-    url(../../assets/images/header.jpg);
-  background-position: center;
-  background-size: auto, cover;
+  overflow: hidden;
   &__text-box {
     position: absolute;
     top: 40%;
@@ -20,9 +11,26 @@
     transform: translate(-50%, -50%);
     text-align: center;
   }
+  &__picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: auto, cover;
+    height: 87rem;
+    width: 100%;
+    animation: movingHeaderPic 7s ease-in-out;
+    background-image: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(0, 0, 0, 0.287) 49%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      url(../../assets/images/header.jpg);
+  }
 }
 
 .button-scroll {
+  z-index: 1;
   position: absolute;
   top: 78%;
   left: 45%;
@@ -43,9 +51,10 @@
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
-  animation: up 1.4s ease-out 1.6s;
+  animation: up 3.4s ease-out 2.6s;
   animation-fill-mode: backwards;
   &::after {
+    z-index: 1;
     background: $color-white;
     content: "";
     height: 17vh;
@@ -53,8 +62,5 @@
     position: absolute;
     top: 100%;
     width: 0.01rem;
-  }
-  &:hover {
-    background-color: rgba(158, 158, 158, 0.26);
   }
 }

@@ -9,7 +9,7 @@ const BannerSec = (props) => {
       <Parallax
         className="bannerSec__pic"
         bgImage={picture}
-        strength={500}
+        strength={1000}
       ></Parallax>
     </section>
   );
