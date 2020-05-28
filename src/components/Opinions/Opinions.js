@@ -4,7 +4,6 @@ import Slider from "infinite-react-carousel";
 
 const Opinions = (props) => {
   const settings = {
-    dots: true,
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: true,
@@ -12,27 +11,47 @@ const Opinions = (props) => {
     duration: 500,
   };
   return (
-    <section className="opinions" id="opinions">
-      <h2 className="heading-secondary">Co o mnie mówią</h2>
+    <div>
+      <h2 className="heading-secondary">Co o mnie mowia</h2>
       <Slider className="bx" {...settings}>
         <section className="bx__of-txt">
           <h3 className="heading-opinions">Adam Sandler</h3>
-          <p className="paragraph-opinions">to bylo dobre</p>
+          <p className="paragraph-opinions">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
         </section>
         <section className="bx__of-txt">
           <h3 className="heading-opinions">Jessica Parker</h3>
-          <p className="paragraph-opinions">a to jeszcze lepsze</p>
+          <p className="paragraph-opinions">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
         </section>
         <section className="bx__of-txt">
           <h3 className="heading-opinions">Ewa & Adam</h3>
-          <p className="paragraph-opinions">a to juz wgl </p>
+          <p className="paragraph-opinions">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
         </section>
         <section className="bx__of-txt">
           <h3 className="heading-opinions">Szymon</h3>
-          <p className="paragraph-opinions">super super</p>
+          <p className="paragraph-opinions">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
         </section>
       </Slider>
-    </section>
+    </div>
   );
 };
 export default React.memo(Opinions);

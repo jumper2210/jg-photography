@@ -1,25 +1,15 @@
-.opinions {
-  margin: 0.5rem;
-  padding: 15rem 0 45rem 0;
-  position: relative;
-  top: 0%;
-  left: 0%;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  background-color: #ffeff7;
-  // background-color: #dfdfdf;
-}
-
 .bx {
   width: 90%;
   transform: translate(-50%, -50%);
   position: absolute;
-  top: 54%;
+  top: 60%;
   left: 50%;
   margin-top: 2rem;
-  height: 40rem;
+  height: 45rem;
+
+  background-color: transparent;
   &__of-txt {
     width: 100%;
-    height: 30rem;
+    height: 40rem;
   }
 }

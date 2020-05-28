@@ -1,7 +1,7 @@
 @import "../../sass/variables";
 @import "../../sass/animations";
 .header {
-  height: 97vh;
+  height: 100vh;
   position: relative;
   overflow: hidden;
   &__text-box {
@@ -16,7 +16,7 @@
     top: 0;
     left: 0;
     background-size: auto, cover;
-    height: 87rem;
+    height: 100vh;
     width: 100%;
     animation: movingHeaderPic 7s ease-in-out;
     background-image: linear-gradient(
