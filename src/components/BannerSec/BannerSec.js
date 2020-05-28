@@ -7,7 +7,7 @@ const BannerSec = (props) => {
   return (
     <section className="bannerSec" id="banner">
       <Parallax className="bannerSec__pic" bgImage={picture} strength={500} />
-      <span className="bannerSec__pic--overlay" />
+      <span className="bannerSec__overlay" />
     </section>
   );
 };

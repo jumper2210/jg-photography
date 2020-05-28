@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./Gallery.scss";
 import images from "../../assets/images/gallery/index";
-
 import Lightbox from "react-image-lightbox";
+import "react-image-lightbox/style.css";
 const Gallery = (props) => {
   const [photoIndex, setPhotoIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);

@@ -11,14 +11,14 @@ const FadeInElement = (props) => {
     observer.observe(domRef.current);
   }, []);
   return (
-    <div
+    <span
       className={`fade-in-section ${
         isVisible ? "fade-in-section__is-visible" : ""
       }`}
       ref={domRef}
     >
       {props.children}
-    </div>
+    </span>
   );
 };
 export default FadeInElement;

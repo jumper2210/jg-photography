@@ -8,11 +8,11 @@
   &__pic {
     height: 70rem;
     width: 100%;
-    &--overlay {
-      background-color: rgba(133, 133, 133, 0.178);
-      width: 100%;
-      height: 130rem;
-      z-index: 2;
-    }
+  }
+  &__overlay {
+    background-color: rgba(133, 133, 133, 0.178);
+    width: 100%;
+    height: 130rem;
+    z-index: 2;
   }
 }

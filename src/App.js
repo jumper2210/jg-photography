@@ -17,6 +17,7 @@ const App = () => {
     <BrowserRouter>
       <React.Fragment>
         <Layout />
+        <About />
         <Banner>
           <Opinions />
         </Banner>
@@ -29,7 +30,6 @@ const App = () => {
           )}
         />
         <BannerSec />
-        <About />
       </React.Fragment>
     </BrowserRouter>
   );
