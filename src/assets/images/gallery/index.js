@@ -10,7 +10,14 @@ import g9 from "./g9.jpg";
 import g10 from "./g10.jpg";
 import g11 from "./g11.jpg";
 import g12 from "./g12.jpg";
-
+import g13 from "./g13.jpg";
+import g14 from "./g14.jpg";
+import g15 from "./g15.jpg";
+import g16 from "./g16.jpg";
+import g17 from "./g17.jpg";
+import g18 from "./g18.jpg";
+import g19 from "./g19.jpg";
+import g20 from "./g20.jpg";
 const images = [
   {
     src: g1,
@@ -59,6 +66,38 @@ const images = [
   {
     src: g12,
     id: 12,
+  },
+  {
+    src: g13,
+    id: 13,
+  },
+  {
+    src: g14,
+    id: 14,
+  },
+  {
+    src: g15,
+    id: 15,
+  },
+  {
+    src: g16,
+    id: 16,
+  },
+  {
+    src: g17,
+    id: 17,
+  },
+  {
+    src: g18,
+    id: 18,
+  },
+  {
+    src: g19,
+    id: 19,
+  },
+  {
+    src: g20,
+    id: 20,
   },
 ];
 export default images;

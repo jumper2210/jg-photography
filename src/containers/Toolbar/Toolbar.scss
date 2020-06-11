@@ -3,15 +3,14 @@
   position: absolute;
   top: 0%;
   left: 0%;
+  // background-color: rgba(0, 0, 0, 0.918);
   padding: 3rem 0rem 3.5rem 0rem;
   text-align: center;
   z-index: 3;
   overflow: hidden;
   transition: all 0.2s ease-in-out;
-  margin: auto 0.7rem;
   &--hide {
-    // background-color: rgb(86, 86, 86);
     // position: fixed;
-    // // // background-position: center;
+    // // background-position: center;
   }
 }

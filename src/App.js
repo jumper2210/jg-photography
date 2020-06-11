@@ -7,6 +7,8 @@ import Opinions from "./components/Opinions/Opinions";
 import BannerSec from "./components/BannerSec/BannerSec";
 import About from "./components/About/About";
 import Spinner from "./UI/Spinner/Spinner";
+import Offer from "./components/Offer/Offer";
+import Footer from "./components/Footer/Footer";
 
 const Gallery = lazy(() => {
   return import("./components/Gallery/Gallery");
@@ -30,6 +32,8 @@ const App = () => {
           )}
         />
         <BannerSec />
+        <Offer />
+        <Footer />
       </React.Fragment>
     </BrowserRouter>
   );

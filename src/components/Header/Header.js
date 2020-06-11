@@ -2,6 +2,7 @@ import React from "react";
 import "./Header.scss";
 import "../../sass/_typography.scss";
 import { Link } from "react-scroll";
+
 const Header = (props) => {
   return (
     <section className="header" ref={props.headerRef}>

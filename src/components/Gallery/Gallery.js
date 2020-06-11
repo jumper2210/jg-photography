@@ -9,15 +9,17 @@ const Gallery = (props) => {
 
   return (
     <section className="container">
-      {images.map(({ id, src }) => (
-        <img
-          key={id}
-          src={src}
-          alt="pic"
-          className="container__item"
-          onClick={() => setIsOpen(true)}
-        />
-      ))}
+      {images.map(({ id, src }) =>
+        id <= 12 ? (
+          <img
+            key={id}
+            src={src}
+            alt="pic"
+            className="container__item"
+            onClick={() => setIsOpen(true)}
+          />
+        ) : null
+      )}
       {isOpen && (
         <Lightbox
           mainSrc={images[photoIndex].src}
