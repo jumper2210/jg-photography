@@ -11,13 +11,12 @@ const Gallery = (props) => {
     <section className="container">
       {images.map(({ id, src }) =>
         id <= 12 ? (
-          <img
-            key={id}
-            src={src}
-            alt="pic"
-            className="container__item"
-            onClick={() => setIsOpen(true)}
-          />
+          <div className="box" onClick={() => setIsOpen(true)}>
+            <img key={id} src={src} alt="img-g" className="box__img" />
+            <div className="con-text">
+              <p>Justyna Garbal Photography</p>
+            </div>
+          </div>
         ) : null
       )}
       {isOpen && (

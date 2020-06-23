@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import Header from "../Header/Header";
 import Toolbar from "../../containers/Toolbar/Toolbar";
+import Card from "../Card/Card";
 const Layout = (props) => {
   const [scrollY, setScrollY] = useState(0);
-  const [opinionSection, setOpinionSection] = useState(false);
-  const [ejectToolbar, setEjectToolbar] = useState(false);
+  const [boundary, setBoundary] = useState(false);
+  const [showToolbar, setShowToolbar] = useState(true);
   const headerRef = useRef(null);
   const toolbarRef = useRef(null);
   const yOffset = () => {
@@ -16,13 +17,15 @@ const Layout = (props) => {
     window.addEventListener("scroll", () => {
       let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
       if (scrollTop > lastScrollTop) {
-        setEjectToolbar(true);
+        setShowToolbar(false);
       } else {
-        setEjectToolbar(false);
+        setShowToolbar(true);
       }
       lastScrollTop = scrollTop;
     });
-  }, [setOpinionSection]);
+    console.log(boundary);
+  }, [setBoundary]);
+
   useEffect(() => {
     const observeScroll = () => {
       window.addEventListener("scroll", yOffset);
@@ -32,6 +35,7 @@ const Layout = (props) => {
       window.removeEventListener("scroll", yOffset);
     };
   });
+
   useEffect(() => {
     const toolbarHeight = toolbarRef.current
       ? toolbarRef.current.offsetHeight
@@ -40,21 +44,21 @@ const Layout = (props) => {
       ? headerRef.current.offsetHeight - toolbarHeight
       : 0;
     if (scrollY > distance) {
-      setOpinionSection(true);
+      setBoundary(true);
     } else {
-      setOpinionSection(false);
+      setBoundary(false);
     }
-  }, [setOpinionSection, scrollY]);
+  }, [setBoundary, scrollY]);
 
   return (
     <React.Fragment>
-      <Header headerRef={headerRef}>
-        <Toolbar
-          toolbarRef={toolbarRef}
-          showToolbar={opinionSection}
-          hideToolbar={ejectToolbar}
-        />
-      </Header>
+      <Card />
+      <Toolbar
+        toolbarRef={toolbarRef}
+        boundaryActive={boundary}
+        showToolbar={showToolbar}
+      />
+      <Header headerRef={headerRef}></Header>
     </React.Fragment>
   );
 };

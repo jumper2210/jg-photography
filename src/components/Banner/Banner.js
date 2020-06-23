@@ -6,10 +6,9 @@ import picture from "../../assets/images/banner_small.jpg";
 const Banner = (props) => {
   return (
     <section className="banner" id="banner">
-      <Parallax className="banner__pic" bgImage={picture} strength={1050}>
+      <Parallax className="banner__pic" bgImage={picture} strength={300}>
         <span className="banner__pic--overlay" />
       </Parallax>
-
       {props.children}
     </section>
   );

@@ -12,7 +12,7 @@ const Opinions = (props) => {
   };
   return (
     <div>
-      <h2 className="heading-secondary">Co o mnie mowia</h2>
+      {/* <h2 className="heading-secondary">Co o mnie mowia</h2> */}
       <Slider className="bx" {...settings}>
         <section className="bx__of-txt">
           <h3 className="heading-opinions">Adam Sandler</h3>

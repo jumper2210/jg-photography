@@ -19,10 +19,7 @@ const App = () => {
     <BrowserRouter>
       <React.Fragment>
         <Layout />
-        <About />
-        <Banner>
-          <Opinions />
-        </Banner>
+        <Banner />
         <Route
           path="/"
           render={() => (
@@ -31,8 +28,11 @@ const App = () => {
             </Suspense>
           )}
         />
-        <BannerSec />
+        <About />
         <Offer />
+        <Opinions />
+
+        {/* <BannerSec /> */}
         <Footer />
       </React.Fragment>
     </BrowserRouter>

@@ -1,69 +1,53 @@
 @import "../../sass/variables";
 @import "../../sass/animations";
-.header {
-  height: 100vh;
-  position: relative;
+.slide-container {
+  height: 115vh;
+  width: 100%;
+  margin: auto;
   overflow: hidden;
-  // animation: movingHeaderPic 4s ease-out;
-  &__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100vw;
-    text-align: center;
-  }
-  &__picture {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-attachment: fixed;
-    background-size: cover;
-    // background-position: center;
-    height: 100vh;
+  margin-bottom: 0.3rem;
+  &--item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // background-size: cover;
     width: 100%;
-    background-image: linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(26, 26, 26, 0.164) 49%,
-        rgba(255, 255, 255, 0) 100%
-      ),
-      url(../../assets/images/header.jpg);
+    height: auto;
   }
 }
 
-.button-scroll {
-  z-index: 1;
-  position: absolute;
-  top: 78%;
-  left: 45%;
-  cursor: pointer;
-  background-color: transparent;
-  border-radius: 1.2rem;
-  box-shadow: inset 0 0 0 0.3rem rgba(255, 255, 255, 0.596);
-  color: $color-white;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 1.9rem;
-  font-weight: 700;
-  height: 4.75rem;
-  letter-spacing: 0.125em;
-  line-height: 4.75rem;
-  padding: 0 2rem;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  white-space: nowrap;
-  animation: up 3.4s ease-out 2.6s;
-  animation-fill-mode: backwards;
-  &::after {
-    z-index: 1;
-    background: $color-white;
-    content: "";
-    height: 17vh;
-    left: 50%;
-    position: absolute;
-    top: 100%;
-    width: 0.01rem;
-  }
-}
+// .button-scroll {
+//   z-index: 1;
+//   position: absolute;
+//   top: 78%;
+//   left: 45%;
+//   cursor: pointer;
+//   background-color: transparent;
+//   border-radius: 1.2rem;
+//   box-shadow: inset 0 0 0 0.3rem rgba(255, 255, 255, 0.596);
+//   color: $color-white;
+//   cursor: pointer;
+//   display: inline-block;
+//   font-size: 1.9rem;
+//   font-weight: 700;
+//   height: 4.75rem;
+//   letter-spacing: 0.125em;
+//   line-height: 4.75rem;
+//   padding: 0 2rem;
+//   text-align: center;
+//   text-decoration: none;
+//   text-transform: uppercase;
+//   white-space: nowrap;
+//   animation: up 3.4s ease-out 2.6s;
+//   animation-fill-mode: backwards;
+//   &::after {
+//     z-index: 1;
+//     background: $color-white;
+//     content: "";
+//     height: 17vh;
+//     left: 50%;
+//     position: absolute;
+//     top: 100%;
+//     width: 0.01rem;
+//   }
+// }

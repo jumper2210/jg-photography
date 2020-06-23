@@ -1,16 +1,18 @@
+@import "../../sass/animations";
 .toolbar {
   width: 100%;
   position: absolute;
   top: 0%;
   left: 0%;
-  // background-color: rgba(0, 0, 0, 0.918);
-  padding: 3rem 0rem 3.5rem 0rem;
-  text-align: center;
+  background-color: rgb(255, 255, 255);
+  padding: 2.5rem 0rem 2.5rem 0rem;
   z-index: 3;
+  text-align: center;
   overflow: hidden;
-  transition: all 0.2s ease-in-out;
-  &--hide {
-    // position: fixed;
-    // // background-position: center;
+  opacity: 0;
+  &--show {
+    // opacity: 1;
+    position: fixed;
+    animation: showToolbar 0.3s ease-in-out;
   }
 }

@@ -1,34 +1,33 @@
 import React from "react";
 import "./Header.scss";
-import "../../sass/_typography.scss";
-import { Link } from "react-scroll";
+import { Fade } from "react-slideshow-image";
+import p1 from "../../assets/images/header.jpg";
+import p2 from "../../assets/images/sp_2.jpg";
+import p3 from "../../assets/images/sp_3.jpg";
 
 const Header = (props) => {
+  const fadeImages = [
+    { id: 1, src: p1 },
+    { id: 2, src: p2 },
+
+    { id: 3, src: p3 },
+  ];
+  const properties = {
+    duration: 2300,
+    transitionDuration: 900,
+    infinite: true,
+    indicators: false,
+    arrows: false,
+    pauseOnHover: false,
+  };
   return (
-    <section className="header" ref={props.headerRef}>
-      <span className="header__picture" />
-      <div className="header__text-box">
-        <h1 className="heading-primary">
-          <span className="heading-primary--main">Justyna Garbal</span>
-          <span className="heading-primary--sub">
-            Professional Photographer
-          </span>
-        </h1>
-      </div>
-      <Link
-        to={"opinions"}
-        spy={true}
-        smooth={true}
-        hashSpy={true}
-        duration={1500}
-        isDynamic={true}
-        offset={-30}
-        ignoreCancelEvents={false}
-      >
-        <span className="button-scroll"> meet me</span>
-      </Link>
-      {props.children}
-    </section>
+    <div className="slide-container" ref={props.headerRef}>
+      <Fade {...properties}>
+        {fadeImages.map(({ src, id }) => (
+          <img key={id} src={src} alt="alt" className="slide-container--item" />
+        ))}
+      </Fade>
+    </div>
   );
 };
 export default React.memo(Header);

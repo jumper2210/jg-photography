@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import "./About.scss";
 import "../../sass/_typography.scss";
-import me from "../../assets/images/ab_3.jpg";
+import me from "../../assets/images/ab.jpg";
 import { useIntersection } from "react-use";
 import gsap from "gsap";
 
@@ -16,10 +16,10 @@ const About = (props) => {
   const fadeIn = (element) => {
     gsap.to(element, 1, {
       opacity: 1,
-      y: -60,
+      y: -30,
       ease: "power4.out",
       stagger: {
-        amount: 0.3,
+        amount: 0.2,
       },
     });
   };
@@ -27,39 +27,31 @@ const About = (props) => {
   const fadeOut = (element) => {
     gsap.to(element, 1, {
       opacity: 0,
-      y: -20,
+      y: -10,
       ease: "power4.out",
     });
   };
 
-  intersection && intersection.intersectionRatio < 0.5
+  intersection && intersection.intersectionRatio < 0.6
     ? fadeOut(".fadeIn")
     : fadeIn(".fadeIn");
 
   return (
-    <section className="about">
-      <h2 className="heading-about">About me</h2>
-      <div ref={sectionRef} className="about__box fadeIn">
-        <div className="about__box__of-picture ">
-          <img
-            src={me}
-            alt="abt"
-            className="about__box__of-picture--1 fadeIn"
-          />
-        </div>
-        <div className="about__box__of-text fadeIn ">
-          <h3 className="heading-name">Justyna Garbal</h3>
-          <p className="paragraph-about ">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          </p>
-        </div>
-      </div>
+    <section ref={sectionRef} className="about fade-in">
+      <img src={me} alt="about" className="about__photo" />
+      <h4 className="about__heading">about me</h4>
+      <p className="about__paragraph">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
+        <br></br>
+        <br></br>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo
+      </p>
     </section>
   );
 };
