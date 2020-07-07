@@ -7,30 +7,31 @@ body {
 
 .heading-primary-main {
   display: block;
-  color: rgb(32, 32, 32);
+  color: #ffffff;
   text-transform: uppercase;
   backface-visibility: hidden;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.3rem;
-  font-size: 3.5rem;
-  animation-name: focus-when-display;
-  animation-duration: 3.4s;
-  animation-timing-function: ease-in-out;
+  font-size: 6.5rem;
   font-family: "Dancing Script", cursive;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  left: 1%;
+  white-space: nowrap;
 }
 
-.heading-primary-sub {
-  margin-top: 1rem;
-  color: rgb(32, 32, 32);
+.heading-bannerSec {
+  font-size: 5rem;
+  color: #ffffff;
   text-transform: uppercase;
-  backface-visibility: hidden;
   font-family: "Dancing Script", cursive;
-  display: block;
-  font-weight: 300;
-  font-size: 1.9rem;
-  animation-name: focus-when-display;
-  animation-duration: 3.4s;
-  animation-timing-function: ease-in-out;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  letter-spacing: 1.2rem;
 }
 
 .heading-secondary {
@@ -48,29 +49,51 @@ body {
 }
 
 .heading-about {
-  position: absolute;
-  top: 13%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 3.8rem;
+  position: relative;
+  top: 40%;
+  left: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3rem;
   font-weight: 500;
   letter-spacing: 0.4rem;
   color: rgb(0, 0, 0);
   font-family: Dancing script;
 }
 
+.heading-opinions {
+  font-size: 3.2rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "Dancing Script", cursive;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  letter-spacing: 0.5rem;
+}
+
+.names {
+  font-size: 2.5rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "Dancing Script", cursive;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  letter-spacing: 0.5rem;
+}
+
 .paragraph-opinions {
-  color: #fff;
+  color: rgb(255, 255, 255);
   position: absolute;
   transform: translate(-50%, -50%);
   top: 45%;
   left: 50%;
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-align: left;
   margin: 0 auto;
   font-weight: 300;
   font-family: Relaway;
 }
-
-// .paragraph-about {
-// }

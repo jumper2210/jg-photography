@@ -1,14 +1,7 @@
 import React from "react";
 import "./Footer.scss";
-import Fade from "react-reveal";
 
 const Footer = (props) => {
-  return (
-    <React.Fragment>
-      <Fade bottom>
-        <footer className="footer-ctn"></footer>
-      </Fade>
-    </React.Fragment>
-  );
+  return <footer className="footer-ctn" />;
 };
 export default React.memo(Footer);

@@ -1,13 +1,45 @@
 import React from "react";
 import "./NavigationItems.scss";
 import { Link } from "react-scroll";
-const NavigationItems = () => {
+const NavigationItems = (props) => {
+  const navItemStyle = ["navItems__item"];
+  if (props.isSticky) {
+    navItemStyle.push("navItems__sticky");
+  }
   return (
     <div className="navItems">
-      <li className="navItems__items">about me</li>
-      <li className="navItems__items">opinions</li>
-      <li className="navItems__items">pictures</li>
-      <li className="navItems__items">contact</li>
+      <Link
+        to={"about"}
+        smooth={true}
+        duration={1500}
+        className={navItemStyle.join(" ")}
+      >
+        o mnie
+      </Link>
+      <Link
+        to={"opinions"}
+        smooth={true}
+        duration={1500}
+        className={navItemStyle.join(" ")}
+      >
+        opinie
+      </Link>
+      <Link
+        to={"gallery"}
+        smooth={true}
+        duration={1500}
+        className={navItemStyle.join(" ")}
+      >
+        galeria
+      </Link>
+      <Link
+        to={"footer-ctn"}
+        smooth={true}
+        duration={1500}
+        className={navItemStyle.join(" ")}
+      >
+        kontakt
+      </Link>
     </div>
   );
 };

@@ -8,13 +8,13 @@ const Gallery = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section className="container">
+    <section className="gallery">
       {images.map(({ id, src }) =>
         id <= 12 ? (
           <div className="box" onClick={() => setIsOpen(true)}>
-            <img key={id} src={src} alt="img-g" className="box__img" />
+            <img key={id} src={src} alt="img" className="box__img" />
             <div className="con-text">
-              <p>Justyna Garbal Photography</p>
+              <p>Justyna Garbal fotografia</p>
             </div>
           </div>
         ) : null
