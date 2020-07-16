@@ -1,16 +1,14 @@
 @import "../../sass/variables";
-@import "../../sass/animations";
 .slide-container {
-  height: 125vh;
   width: 100%;
-  overflow: hidden;
-  margin-bottom: 0.4rem;
-  padding: 0rem 0.4rem;
+  background-color: #ffffff;
+  padding: 0.5rem;
   &--item {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: auto;
+    height: 100vh;
+    object-fit: cover;
   }
 }

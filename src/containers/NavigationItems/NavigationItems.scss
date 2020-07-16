@@ -1,16 +1,18 @@
+@import "../../sass/mixins";
 .navItems {
   position: relative;
   display: flex;
   flex-flow: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   list-style: none;
   grid-column: 2;
+  opacity: 1;
   grid-row: 2;
-
   &__item {
+    padding: 0rem 6rem;
     color: #fff;
-    font-weight: 400;
+    font-weight: 600;
     text-transform: none;
     font-size: 1.3rem;
     cursor: pointer;
@@ -19,6 +21,10 @@
   }
   &__sticky {
     color: rgb(0, 0, 0);
-    transform: translateY(5vh);
+    transform: translateY(5.5vh);
+  }
+  @include respond(tab-land) {
+    opacity: 0;
+    display: none;
   }
 }

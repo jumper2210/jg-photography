@@ -8,9 +8,19 @@ const About = (props) => {
   AOS.init();
 
   return (
-    <React.Fragment>
-      <h3 className="heading-about">cos ciekawego o mnie</h3>
-      <section className="about">
+    <section className="about">
+      <div className="about__wrapper">
+        <div
+          data-aos="fade-left"
+          data-aos-duration="800"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="false"
+          data-aos-anchor-placement="top-center"
+          className="about__wrapper--heading"
+        >
+          cos ciekawego o mnie
+        </div>
         <span
           data-aos="fade-right"
           data-aos-duration="800"
@@ -19,7 +29,7 @@ const About = (props) => {
           data-aos-once="false"
           data-aos-anchor-placement="top-center"
         >
-          <img src={me} alt="about" className="about__photo " />
+          <img src={me} alt="about" className="about__wrapper--photo " />
         </span>
 
         <span
@@ -30,18 +40,28 @@ const About = (props) => {
           data-aos-once="false"
           data-aos-anchor-placement="top-center"
         >
-          <p className="about__paragraph ">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          <p className="about__wrapper--paragraph ">
+            Cześć, mam na imię Justyna. Romantyczka twardo stąpająca po ziemi-
+            tak właśnie opisałabym siebie w kilku słowach. Urodziłam się w
+            sierpniu, może właśnie dlatego uwielbiam ciepłe letnie wieczory.
+            Fotografia to moja, pasja, coś co kocham najbardziej. Od wielu lat
+            towarzyszy mi ona wszędzie, gdzie tylko jestem. Uwielbiam obserwować
+            ludzi i świat , potrafię słuchać, współodczuwać i pozwalać na to, by
+            emocje były stale obecne w moim życiu. Zdjęcia pozwalają mi
+            zatrzymać najpiękniejsze chwile w czasie, zamknąć je w kadrze i
+            wracać do nich wspomnieniami za każdym razem gdy na nie spojrzę.
+            Kocham też i muzykę, szczególnie akustyczną, ale i innymi gatunkami
+            muzycznymi nie pogardzę. Śpiewanie też sprawia mi dużą przyjemność.
+            Trochę żałuję, że nie chodziłam do szkoły muzycznej. Lubię ludzi z
+            pasją, szczególnie tych uzdolnionych muzycznie i artystycznie.
+            Jestem wrażliwa, nie tylko na piękno, ale też i na sytuacje
+            stresujące i te radosne. Zachwycają mnie rzeczy małe, drobne, kwiaty
+            kwitnące wiosną, zachody słońca, jak też światełka pod każdą
+            postacią. Zapraszam Was do mojego świata.
           </p>
         </span>
-      </section>
-    </React.Fragment>
+      </div>
+    </section>
   );
 };
 export default React.memo(About);

@@ -1,5 +1,5 @@
 @import "./variables";
-@import "./animations";
+@import "./mixins";
 body {
   font-weight: 400;
   font-family: "Lato", sans-serif;
@@ -39,38 +39,13 @@ body {
   transform: translate(-50%, -50%);
   top: 15%;
   left: 50%;
-  color: $color-white;
+  color: #ffffff;
   text-transform: uppercase;
   backface-visibility: hidden;
   font-weight: 300;
   font-size: 4.1rem;
   letter-spacing: 0.5rem;
   font-family: Relaway;
-}
-
-.heading-about {
-  position: relative;
-  top: 40%;
-  left: 0;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 3rem;
-  font-weight: 500;
-  letter-spacing: 0.4rem;
-  color: rgb(0, 0, 0);
-  font-family: Dancing script;
-}
-
-.heading-opinions {
-  font-size: 3.2rem;
-  color: #ffffff;
-  text-transform: uppercase;
-  font-family: "Dancing Script", cursive;
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  letter-spacing: 0.5rem;
 }
 
 .names {
@@ -80,9 +55,14 @@ body {
   font-family: "Dancing Script", cursive;
   position: absolute;
   top: 10%;
-  left: 50%;
+  left: 65%;
+  width: 100%;
   transform: translate(-50%, -50%);
   letter-spacing: 0.5rem;
+  @include respond(phone) {
+    font-size: 1.3rem;
+    top: 5%;
+  }
 }
 
 .paragraph-opinions {
@@ -96,4 +76,9 @@ body {
   margin: 0 auto;
   font-weight: 300;
   font-family: Relaway;
+  @include respond(phone) {
+    font-size: 1.3rem;
+    width: 90%;
+    padding: 0 4rem;
+  }
 }

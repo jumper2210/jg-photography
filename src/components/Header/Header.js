@@ -1,9 +1,9 @@
 import React from "react";
 import "./Header.scss";
 import { Fade } from "react-slideshow-image";
-import p1 from "../../assets/images/header.jpg";
-import p2 from "../../assets/images/header2.jpg";
-import p3 from "../../assets/images/header3.jpg";
+import p1 from "../../assets/images/header2.jpg";
+import p2 from "../../assets/images/header3.jpg";
+import p3 from "../../assets/images/header.jpg";
 
 const Header = (props) => {
   const fadeImages = [
@@ -20,16 +20,11 @@ const Header = (props) => {
     pauseOnHover: false,
   };
   return (
-    <div className="slide-container" ref={props.headerRef}>
-      <Fade {...properties}>
-        {fadeImages.map(({ src, id }) => (
-          <img key={id} src={src} alt="alt" className="slide-container--item" />
-        ))}
-      </Fade>
-      <h1 className="heading-primary-main">
-        NATURE ･ EVENTS ･ WEDDINGS ･ PHOTOGRAPHY
-      </h1>
-    </div>
+    <Fade {...properties} className="slide-container" ref={props.headerRef}>
+      {fadeImages.map(({ src, id }) => (
+        <img key={id} src={src} alt="alt" className="slide-container--item" />
+      ))}
+    </Fade>
   );
 };
 export default React.memo(Header);

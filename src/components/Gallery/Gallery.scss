@@ -1,12 +1,14 @@
+@import "../../sass/mixins";
 .gallery {
   width: 100%;
   display: grid;
-  grid-gap: 0.3rem;
-  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(25rem, 1fr));
-  padding: 0rem 0.3rem;
-  margin-top: 0.3rem;
-  background-color: transparent;
+  grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(25rem, 1fr));
+  background-color: rgb(0, 0, 0);
+  margin-bottom: 100vh;
+  @include respond(phone) {
+    margin-bottom: 0;
+  }
   .box {
     position: relative;
     cursor: pointer;
@@ -23,25 +25,15 @@
       left: 0;
       right: 0;
       bottom: 0;
-      transition: all 0.8s ease-out;
+      transition: background-color 0.6s ease-in-out;
     }
     &:hover::before {
-      background-color: rgba(0, 0, 0, 0.698);
+      background-color: rgba(255, 255, 255, 0.769);
+      @include respond(tab-land) {
+        &:hover::before {
+          background-color: none;
+        }
+      }
     }
-  }
-  .con-text {
-    position: absolute;
-    color: white;
-    bottom: 0;
-    width: 270px;
-    height: 250px;
-    padding: 75px 25px;
-    display: none;
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 400;
-  }
-  .box:hover .con-text {
-    display: block;
   }
 }

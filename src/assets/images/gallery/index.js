@@ -15,9 +15,7 @@ import g14 from "./g14.jpg";
 import g15 from "./g15.jpg";
 import g16 from "./g16.jpg";
 import g17 from "./g17.jpg";
-import g18 from "./g18.jpg";
-import g19 from "./g19.jpg";
-import g20 from "./g20.jpg";
+
 const images = [
   {
     src: g1,
@@ -86,18 +84,6 @@ const images = [
   {
     src: g17,
     id: 17,
-  },
-  {
-    src: g18,
-    id: 18,
-  },
-  {
-    src: g19,
-    id: 19,
-  },
-  {
-    src: g20,
-    id: 20,
   },
 ];
 export default images;

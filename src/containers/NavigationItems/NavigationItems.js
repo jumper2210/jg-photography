@@ -33,7 +33,7 @@ const NavigationItems = (props) => {
         galeria
       </Link>
       <Link
-        to={"footer-ctn"}
+        to={"footer"}
         smooth={true}
         duration={1500}
         className={navItemStyle.join(" ")}

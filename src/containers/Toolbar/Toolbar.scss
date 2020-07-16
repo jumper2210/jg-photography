@@ -1,11 +1,11 @@
-@import "../../sass/animations";
+@import "../../sass/mixins";
 .toolbar {
   width: 100%;
-  position: absolute;
+  position: fixed;
   display: grid;
-  grid-template-columns: 0.5 1fr 0.5fr;
+  grid-template-columns: min-content 0.9fr;
   grid-template-rows: 0.5fr 0.5fr;
-  height: 20vh;
+  height: 18vh;
   top: 0%;
   left: 0%;
   background-color: rgba(255, 255, 255, 0);
@@ -13,23 +13,39 @@
   overflow: hidden;
   z-index: 10;
   transition: all 0.3s ease-in;
-
   &__heading {
     text-transform: uppercase;
     color: #ffffff;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     display: inline-block;
     text-align: center;
-    padding-top: 1rem;
-    margin-left: 1rem;
+    font-family: "Dancing Script", cursive;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
   }
   &--sticky {
     position: fixed;
-    grid-template-columns: 0.5 1fr 0.5fr;
     grid-template-rows: 0;
     background-color: rgb(255, 255, 255);
     transform: translateY(-10vh);
     border-bottom: 1px solid rgb(26, 26, 26);
-    color: rgb(5, 5, 5);
+    @include respond(tab-land) {
+      transform: translateY(-10vh);
+    }
+  }
+  &--sticky > &__heading {
+    @include respond(tab-land) {
+      color: rgb(0, 0, 0);
+      transform: translateY(9.5vh);
+      font-size: 2.8rem;
+    }
+    @include respond(tab-port) {
+      font-size: 2.4rem;
+      transform: translateY(10vh);
+    }
+    @include respond(phone) {
+      font-size: 1.8rem;
+      transform: translateY(11vh);
+    }
   }
 }

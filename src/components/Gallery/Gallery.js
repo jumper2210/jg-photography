@@ -13,9 +13,7 @@ const Gallery = (props) => {
         id <= 12 ? (
           <div className="box" onClick={() => setIsOpen(true)}>
             <img key={id} src={src} alt="img" className="box__img" />
-            <div className="con-text">
-              <p>Justyna Garbal fotografia</p>
-            </div>
+            <div className="con-text"></div>
           </div>
         ) : null
       )}

@@ -1,10 +1,12 @@
 @import "../../sass/mixins";
 .hamburger {
+  opacity: 0;
   padding: 4rem;
   display: inline-block;
   background-color: transparent;
   border: 0;
   margin: 0;
+  z-index: 100;
   &__box {
     cursor: pointer;
     width: 3.5rem;
@@ -12,17 +14,26 @@
     display: inline-block;
     position: relative;
   }
+  &__box--sticky {
+    @include respond(tab-land) {
+      transform: translateY(7.5vh);
+    }
+    @include respond(tab-port) {
+      transform: translateY(8.5vh);
+    }
+  }
   &__inner {
     @include hamburger-line;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
+    transition: transform 0.1s 0.1s ease-in-out;
     &::before,
     &::after {
       @include hamburger-line;
       content: "";
       left: 0;
-      transition: transform 0.1s 0.1s ease-in-out;
+      transition: transform 0.2s 0.2s ease-in-out;
     }
     &::before {
       top: -1rem;
@@ -31,6 +42,13 @@
       top: 1rem;
     }
   }
+  @include respond(tab-land) {
+    opacity: 1;
+  }
+}
+
+.hamburger--active {
+  transform: translateX(25rem);
 }
 
 .hamburger--active .hamburger__inner {
@@ -43,8 +61,4 @@
 
 .hamburger--active .hamburger__inner:after {
   transform: translateY(-1rem) rotate(-45deg);
-}
-
-.hamburger--active {
-  transform: translateX(20rem);
 }
