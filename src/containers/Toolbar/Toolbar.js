@@ -16,7 +16,7 @@ const Toolbar = (props) => {
         isOpen={props.isOpen}
         clicked={props.hamburgerClicked}
       />
-      <p className="toolbar__heading">JG - FOTOGRAFIA</p>
+      <p className="toolbar__heading">JG-PHOTOGRAPHY</p>
       <NavigationItems isSticky={props.isSticky} />
     </div>
   );

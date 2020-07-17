@@ -5,7 +5,7 @@ import igPic from "../../assets/images/footer_ig.png";
 const Footer = (props) => {
   return (
     <section className="footer">
-      <div className="footer__p-social">Media spolecznosciowe</div>
+      <div className="footer__p-social">Media społecznościowe</div>
       <div className="footer__p-ig">Instagram</div>
       <div className="footer__p-contact">Wystarczy napisać!</div>
       <div className="footer__ctn-social">

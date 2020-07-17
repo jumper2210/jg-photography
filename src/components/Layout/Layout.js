@@ -11,6 +11,12 @@ const Layout = (props) => {
 
   const sideDrawerToggleHandler = () => {
     setSideDrawerIsVisible(!sideDrawerIsVisible);
+    console.log(sideDrawerIsVisible);
+  };
+
+  const sideDrawerCloseHandler = () => {
+    setSideDrawerIsVisible(false);
+    console.log(sideDrawerIsVisible);
   };
 
   const yOffset = () => {
@@ -44,7 +50,7 @@ const Layout = (props) => {
         hamburgerClicked={sideDrawerToggleHandler}
         isOpen={sideDrawerIsVisible}
       />
-      <SideDrawer open={sideDrawerIsVisible} />
+      <SideDrawer open={sideDrawerIsVisible} closed={sideDrawerCloseHandler} />
       <Header headerRef={headerRef}></Header>
       {props.children}
     </React.Fragment>

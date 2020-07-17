@@ -15,13 +15,17 @@
   transition: all 0.3s ease-in;
   &__heading {
     text-transform: uppercase;
-    color: #ffffff;
+    color: #000000;
     font-size: 3.5rem;
     display: inline-block;
     text-align: center;
     font-family: "Dancing Script", cursive;
     font-weight: 600;
     letter-spacing: 0.2rem;
+    @include respond(phone) {
+      font-size: 2.5rem;
+      transform: translateY(1vh);
+    }
   }
   &--sticky {
     position: fixed;
@@ -40,12 +44,12 @@
       font-size: 2.8rem;
     }
     @include respond(tab-port) {
-      font-size: 2.4rem;
-      transform: translateY(10vh);
+      font-size: 2.6rem;
+      transform: translateY(10.3vh);
     }
     @include respond(phone) {
       font-size: 1.8rem;
-      transform: translateY(11vh);
+      transform: translateY(11.6vh);
     }
   }
 }

@@ -3,10 +3,10 @@
   top: 0;
   left: 0;
   height: 100%;
-  width: 25rem;
+  width: 20rem;
   background-color: #f5f5f5;
-  z-index: 100;
-  transform: translateX(-25rem);
+  z-index: 200;
+  transform: translateX(-20rem);
   box-sizing: border-box;
   transition: transform 0.3s ease-out;
   &__list {
@@ -15,17 +15,16 @@
     margin-top: 10rem;
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 2.2rem;
     &--item {
-      margin-bottom: 20px;
+      margin-bottom: 3rem;
+      padding: 1rem;
     }
   }
-}
-
-.Open {
-  transform: translateX(0);
-}
-
-.Close {
-  transform: translateX(-100%);
+  &__Open {
+    transform: translateX(0);
+  }
+  &__Close {
+    transform: translateX(-20rem);
+  }
 }

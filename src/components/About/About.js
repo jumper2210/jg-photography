@@ -11,8 +11,9 @@ const About = (props) => {
     <section className="about">
       <div className="about__wrapper">
         <div
+          data-aos-offset="20"
           data-aos="fade-left"
-          data-aos-duration="800"
+          data-aos-duration="900"
           data-aos-easing="ease-in-out"
           data-aos-mirror="true"
           data-aos-once="false"
@@ -23,7 +24,7 @@ const About = (props) => {
         </div>
         <span
           data-aos="fade-right"
-          data-aos-duration="800"
+          data-aos-duration="900"
           data-aos-easing="ease-in-out"
           data-aos-mirror="true"
           data-aos-once="false"
@@ -34,7 +35,7 @@ const About = (props) => {
 
         <span
           data-aos="fade-left"
-          data-aos-duration="1000"
+          data-aos-duration="900"
           data-aos-easing="ease-in-out"
           data-aos-mirror="true"
           data-aos-once="false"

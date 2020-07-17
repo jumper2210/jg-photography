@@ -7,6 +7,9 @@
   border: 0;
   margin: 0;
   z-index: 100;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
   &__box {
     cursor: pointer;
     width: 3.5rem;
@@ -16,10 +19,13 @@
   }
   &__box--sticky {
     @include respond(tab-land) {
-      transform: translateY(7.5vh);
+      transform: translateY(9vh);
     }
     @include respond(tab-port) {
-      transform: translateY(8.5vh);
+      transform: translateY(9.5vh);
+    }
+    @include respond(phone) {
+      transform: translateY(8.3vh);
     }
   }
   &__inner {
@@ -48,7 +54,7 @@
 }
 
 .hamburger--active {
-  transform: translateX(25rem);
+  display: none;
 }
 
 .hamburger--active .hamburger__inner {

@@ -5,6 +5,7 @@
   display: grid;
   grid-template-rows: 10rem 1fr 10rem;
   justify-items: center;
+  align-items: center;
   position: -webkit-sticky;
   position: fixed;
   bottom: 0rem;
@@ -15,7 +16,8 @@
     position: static;
     bottom: 0;
     z-index: 1;
-    padding: 10rem 3rem 3rem 2rem;
+    padding: 7rem 3rem 3rem 2rem;
+    grid-template-rows: 5rem 1fr 5rem;
   }
   &__p-social {
     @include footer-font;
@@ -38,7 +40,7 @@
   &__ctn-social {
     padding-top: 2rem;
     @include respond(phone) {
-      padding-top: 0rem;
+      padding-top: 5rem;
     }
     &--paragraph {
       @include footer-font;
@@ -46,7 +48,7 @@
       padding-bottom: 4rem;
       @include respond(phone) {
         font-size: 1.2rem;
-        padding-bottom: 3rem;
+        padding-bottom: 2rem;
         padding-top: 1.4rem;
       }
     }
@@ -59,7 +61,7 @@
         width: 2rem;
         cursor: pointer;
       }
-      height: 18rem;
+      // height: 18rem;
       display: flex;
       padding-top: 4rem;
       justify-content: space-around;
@@ -107,6 +109,7 @@
     @include footer-font;
     @include respond(phone) {
       font-size: 1rem;
+      padding-top: 2rem;
     }
     width: 100%;
     grid-column: 1 / span 3;
