@@ -4,6 +4,8 @@ import { Fade } from "react-slideshow-image";
 import p1 from "../../assets/images/header2.jpg";
 import p2 from "../../assets/images/header3.jpg";
 import p3 from "../../assets/images/header.jpg";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Header = (props) => {
   const fadeImages = [
@@ -13,7 +15,6 @@ const Header = (props) => {
   ];
   const properties = {
     duration: 2300,
-    transitionDuration: 900,
     infinite: true,
     indicators: false,
     arrows: false,
@@ -22,7 +23,11 @@ const Header = (props) => {
   return (
     <Fade {...properties} className="slide-container" ref={props.headerRef}>
       {fadeImages.map(({ src, id }) => (
-        <img key={id} src={src} alt="alt" className="slide-container--item" />
+        <LazyLoadImage
+          src={src}
+          className="slide-container--item"
+          effect="blur"
+        />
       ))}
     </Fade>
   );

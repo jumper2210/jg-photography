@@ -3,7 +3,10 @@ import "./Gallery.scss";
 import images from "../../assets/images/gallery/index";
 import Lightbox from "react-image-lightbox";
 import "react-image-lightbox/style.css";
-const Gallery = (props) => {
+import LazyLoad from "react-lazyload";
+import "react-lazy-load-image-component/src/effects/blur.css";
+
+const Gallery = () => {
   const [photoIndex, setPhotoIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -12,8 +15,9 @@ const Gallery = (props) => {
       {images.map(({ id, src }) =>
         id <= 12 ? (
           <div className="box" onClick={() => setIsOpen(true)}>
-            <img key={id} src={src} alt="img" className="box__img" />
-            <div className="con-text"></div>
+            <LazyLoad height={200} offset={700} once>
+              <img alt={src} src={src} className="box__img" />
+            </LazyLoad>
           </div>
         ) : null
       )}

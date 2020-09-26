@@ -11,12 +11,10 @@ const Layout = (props) => {
 
   const sideDrawerToggleHandler = () => {
     setSideDrawerIsVisible(!sideDrawerIsVisible);
-    console.log(sideDrawerIsVisible);
   };
 
   const sideDrawerCloseHandler = () => {
     setSideDrawerIsVisible(false);
-    console.log(sideDrawerIsVisible);
   };
 
   const yOffset = () => {

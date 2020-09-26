@@ -17,23 +17,5 @@
       height: 35rem;
       object-fit: cover;
     }
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      transition: background-color 0.6s ease-in-out;
-    }
-    &:hover::before {
-      background-color: rgba(255, 255, 255, 0.769);
-      @include respond(tab-land) {
-        &:hover::before {
-          background-color: none;
-        }
-      }
-    }
   }
 }

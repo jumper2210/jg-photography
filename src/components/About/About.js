@@ -4,6 +4,7 @@ import "../../sass/_typography.scss";
 import me from "../../assets/images/ab.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 const About = (props) => {
   AOS.init();
 
@@ -20,7 +21,7 @@ const About = (props) => {
           data-aos-anchor-placement="top-center"
           className="about__wrapper--heading"
         >
-          cos ciekawego o mnie
+          coś ciekawego o mnie
         </div>
         <span
           data-aos="fade-right"
@@ -30,7 +31,7 @@ const About = (props) => {
           data-aos-once="false"
           data-aos-anchor-placement="top-center"
         >
-          <img src={me} alt="about" className="about__wrapper--photo " />
+          <LazyLoadImage src={me} className="about__wrapper--photo" />
         </span>
 
         <span
