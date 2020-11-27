@@ -1,12 +1,12 @@
-import React from "react";
-import "./About.scss";
-import "../../sass/_typography.scss";
-import me from "../../assets/images/ab.jpg";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import React from "react"
+import "./About.scss"
+import "../../sass/_typography.scss"
+import me from "../../assets/images/selfImage.jpg"
+import AOS from "aos"
+import "aos/dist/aos.css"
+import { LazyLoadImage } from "react-lazy-load-image-component"
 const About = (props) => {
-  AOS.init();
+  AOS.init()
 
   return (
     <section className="about">
@@ -19,9 +19,9 @@ const About = (props) => {
           data-aos-mirror="true"
           data-aos-once="false"
           data-aos-anchor-placement="top-center"
-          className="about__wrapper--heading"
+          className="about__wrapper--heading-box"
         >
-          coś ciekawego o mnie
+          <h3 className="heading-aboutSection">coś ciekawego o mnie</h3>
         </div>
         <span
           data-aos="fade-right"
@@ -42,7 +42,7 @@ const About = (props) => {
           data-aos-once="false"
           data-aos-anchor-placement="top-center"
         >
-          <p className="about__wrapper--paragraph ">
+          <p className="paragraph-about">
             Cześć, mam na imię Justyna. Romantyczka twardo stąpająca po ziemi-
             tak właśnie opisałabym siebie w kilku słowach. Urodziłam się w
             sierpniu, może właśnie dlatego uwielbiam ciepłe letnie wieczory.
@@ -64,6 +64,6 @@ const About = (props) => {
         </span>
       </div>
     </section>
-  );
-};
-export default React.memo(About);
+  )
+}
+export default About

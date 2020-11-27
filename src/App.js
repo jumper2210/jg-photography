@@ -1,21 +1,21 @@
-import React from "react";
-import "./App.scss";
-import Layout from "./components/Layout/Layout";
-import Opinions from "./components/Opinions/Opinions";
-import About from "./components/About/About";
-import Footer from "./components/Footer/Footer";
-import Gallery from "./components/Gallery/Gallery";
+import React from "react"
+import "./App.scss"
+import ToolbarLayout from "./components/ToolbarLayout/ToolbarLayout"
+import About from "./components/About/About"
+import Footer from "./components/Footer/Footer"
+import Gallery from "./components/Gallery/Gallery"
+import Contact from "./components/Contact/Contact"
 
 const App = () => {
   return (
     <React.Fragment>
-      <Layout />
-      <Opinions />
-      <About />
+      <ToolbarLayout />
       <Gallery />
+      <About />
+      <Contact />
       <Footer />
     </React.Fragment>
-  );
-};
+  )
+}
 
-export default App;
+export default App

@@ -1,0 +1,25 @@
+@import "../../sass/mixins";
+@import "../../sass/variables";
+.contact {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    padding: 10rem 0;
+    width: 100%;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url(../../assets/images/sliceTop2.png);
+        transform: translateY(-2.9rem);
+        height: 5vh;
+        width: 100%;
+    }
+    &__container {
+        width: 60%;
+        align-items: center;
+        
+    }
+}

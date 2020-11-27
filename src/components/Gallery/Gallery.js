@@ -1,26 +1,18 @@
-import React, { useState } from "react";
-import "./Gallery.scss";
-import images from "../../assets/images/gallery/index";
-import Lightbox from "react-image-lightbox";
-import "react-image-lightbox/style.css";
-import LazyLoad from "react-lazyload";
-import "react-lazy-load-image-component/src/effects/blur.css";
+import React, { useState } from "react"
+import "./Gallery.scss"
+import images from "../../assets/images/gallery/index"
+import Lightbox from "react-image-lightbox"
+import "react-image-lightbox/style.css"
+import SliderImages from "./SliderImages/SliderImages"
 
 const Gallery = () => {
-  const [photoIndex, setPhotoIndex] = useState(0);
-  const [isOpen, setIsOpen] = useState(false);
+  const [photoIndex, setPhotoIndex] = useState(0)
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
     <section className="gallery">
-      {images.map(({ id, src }) =>
-        id <= 12 ? (
-          <div className="box" onClick={() => setIsOpen(true)}>
-            <LazyLoad height={200} offset={700} once>
-              <img alt={src} src={src} className="box__img" />
-            </LazyLoad>
-          </div>
-        ) : null
-      )}
+      <h2 className="heading-secondary">Portfolio</h2>
+      <SliderImages setIsOpen={setIsOpen} images={images} />
       {isOpen && (
         <Lightbox
           mainSrc={images[photoIndex].src}
@@ -35,7 +27,11 @@ const Gallery = () => {
           }
         />
       )}
+      <div className="gallery__btn" onClick={() => setIsOpen(true)}>
+        <span className="gallery__btn--text"></span>
+        zobacz więcej
+      </div>
     </section>
-  );
-};
-export default React.memo(Gallery);
+  )
+}
+export default Gallery

@@ -8,6 +8,8 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "aos": "^3.0.0-beta.6",
+    "axios": "^0.21.0",
+    "formik": "^2.2.5",
     "framer-motion": "^1.11.0",
     "infinite-react-carousel": "^1.2.11",
     "node-sass": "^4.14.1",
@@ -17,11 +19,16 @@
     "react-lazy-load-image-component": "^1.5.0",
     "react-lazyload": "^2.6.9",
     "react-parallax": "^3.0.3",
+    "react-recaptcha": "^2.3.10",
+    "react-responsive-carousel": "^3.2.10",
     "react-reveal": "^1.2.2",
     "react-scripts": "3.4.1",
     "react-scroll": "^1.7.16",
+    "react-slick": "^0.27.13",
     "react-slideshow-image": "^1.5.3",
-    "react-use": "^15.1.1"
+    "react-use": "^15.1.1",
+    "slick-carousel": "^1.8.1",
+    "yup": "^0.31.0"
   },
   "scripts": {
     "start": "react-scripts start",

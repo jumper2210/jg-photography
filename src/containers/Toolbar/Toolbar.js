@@ -1,24 +1,23 @@
-import React from "react";
-import NavigationItems from "../NavigationItems/NavigationItems";
-import "./Toolbar.scss";
-import Hamburger from "../Hamburger/Hamburger";
+import React from "react"
+import NavigationItems from "../NavigationItems/NavigationItems"
+import "./Toolbar.scss"
+import MenuIcon from "../MenuIcon/MenuIcon"
 
 const Toolbar = (props) => {
-  const toolbarStyle = ["toolbar"];
+  const toolbarStyle = ["toolbar"]
   if (props.isSticky) {
-    toolbarStyle.push("toolbar--sticky");
+    toolbarStyle.push("toolbar--sticky")
   }
 
   return (
     <div className={toolbarStyle.join(" ")} ref={props.toolbarRef}>
-      <Hamburger
+      <MenuIcon
         isSticky={props.isSticky}
         isOpen={props.isOpen}
         clicked={props.hamburgerClicked}
       />
-      <p className="toolbar__heading">JG-PHOTOGRAPHY</p>
       <NavigationItems isSticky={props.isSticky} />
     </div>
-  );
-};
-export default React.memo(Toolbar);
+  )
+}
+export default Toolbar

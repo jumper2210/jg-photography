@@ -1,85 +1,113 @@
 @import "./variables";
 @import "./mixins";
 body {
-  font-weight: 400;
-  font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-family: "Lato", sans-serif;
 }
 
 .heading-primary-main {
-  display: block;
-  color: #ffffff;
-  text-transform: uppercase;
-  backface-visibility: hidden;
-  font-weight: 400;
-  letter-spacing: 0.3rem;
-  font-size: 6.5rem;
-  font-family: "Dancing Script", cursive;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  z-index: 1;
-  left: 1%;
-  white-space: nowrap;
+    color: $color-white;
+    font-family: "Dancing Script", cursive;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    font-weight: 600;
+    letter-spacing: 0.7rem;
+    font-size: 6.5rem;
+    white-space: nowrap;
+    text-align: center;
+    margin-bottom: 4rem;
+    @include respond(tab-port) {
+        font-size: 5rem;
+    }
+    @include respond(phone) {
+        font-size: 3rem;
+    }
 }
 
-.heading-bannerSec {
-  font-size: 5rem;
-  color: #ffffff;
-  text-transform: uppercase;
-  font-family: "Dancing Script", cursive;
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  letter-spacing: 1.2rem;
+.heading-primary-sub {
+    position: absolute;
+    width: 60%;
+    padding: 0.5rem;
+    color: $color-primary;
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 0.5rem;
+    font-size: 4.5rem;
+    text-align: center;
+    background-color: $color-white;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include respond(tab-port) {
+        font-size: 3.2rem;
+    }
+    @include respond(phone) {
+        font-size: 2rem;
+    }
 }
 
 .heading-secondary {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 15%;
-  left: 50%;
-  color: #ffffff;
-  text-transform: uppercase;
-  backface-visibility: hidden;
-  font-weight: 300;
-  font-size: 4.1rem;
-  letter-spacing: 0.5rem;
-  font-family: Relaway;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Dancing Script", cursive;
+    font-weight: 700;
+    color: $color-details;
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    font-size: 5rem;
+    letter-spacing: 1.5rem;
+    text-align: center;
+    padding-bottom: 15%;
+    @include respond(phone) {
+        font-size: 3.5rem;
+        top: 15%;
+    }
 }
 
-.names {
-  font-size: 2.5rem;
-  color: #ffffff;
-  text-transform: uppercase;
-
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  margin: 0 auto;
-  transform: translate(-50%, -50%);
-  letter-spacing: 0.5rem;
-  font-family: Relaway;
-  @include respond(phone) {
-    font-size: 1.3rem;
-    top: 5%;
-  }
+.heading-third {
+    font-family: "Dancing Script", cursive;
+    font-weight: 800;
+    letter-spacing: 0.3rem;
+    font-size: 4.5rem;
+    text-align: center;
+    color: $color-details;
+    padding-bottom: 15rem;
 }
 
-.paragraph-opinions {
-  color: rgb(255, 255, 255);
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 45%;
-  left: 50%;
-  font-size: 2rem;
-  text-align: left;
-  margin: 0 auto;
-  font-weight: 300;
-  font-family: Relaway;
-  @include respond(phone) {
-    font-size: 1.3rem;
-    width: 90%;
-    padding: 0 4rem;
-  }
+.heading-aboutSection {
+    font-family: "Dancing Script", cursive;
+    letter-spacing: 0.4rem;
+    font-size: 4.5rem;
+    text-align: center;
+    color: $color-white;
+    text-transform: uppercase;
+    font-weight: 800;
+    @include respond(phone) {
+        font-size: 2.5rem; 
+    }
+}
+
+.paragraph-about {
+    font-weight: 800;
+    color: $color-white;
+    font-size: 1.7rem;
+    text-align: left;
+    line-height: 1.55;
+    padding-bottom: 5rem;
+    padding-right: 10rem;
+    @include respond(tab-port) {
+        width: 100%;
+        padding: 4rem;
+        font-size: 1.4rem;
+    }
+}
+
+.paragraph-footer {
+    color: $color-white;
+    font-size: 2.5rem;
+    font-weight: 400;
+    font-family: "Dancing Script", cursive;
+    letter-spacing: 0.5rem;
 }

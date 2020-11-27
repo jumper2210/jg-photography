@@ -1,11 +1,11 @@
-import React from "react";
-import { Link } from "react-scroll";
-import "./SideDrawer.scss";
-import BackDrop from "../../BackDrop/BackDrop";
+import React from "react"
+import { Link } from "react-scroll"
+import "./SideDrawer.scss"
+import BackDrop from "../../BackDrop/BackDrop"
 const SideDrawer = (props) => {
-  let attachedClasses = ["sideDrawer", "sideDrawer__Close"];
+  let attachedClasses = ["sideDrawer", "sideDrawer__Close"]
   if (props.open) {
-    attachedClasses = ["sideDrawer", "sideDrawer__Open"];
+    attachedClasses = ["sideDrawer", "sideDrawer__Open"]
   }
   return (
     <React.Fragment>
@@ -47,6 +47,6 @@ const SideDrawer = (props) => {
         </ul>
       </div>
     </React.Fragment>
-  );
-};
-export default React.memo(SideDrawer);
+  )
+}
+export default SideDrawer

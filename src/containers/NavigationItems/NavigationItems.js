@@ -1,13 +1,30 @@
-import React from "react";
-import "./NavigationItems.scss";
-import { Link } from "react-scroll";
+import React from "react"
+import "./NavigationItems.scss"
+import { Link } from "react-scroll"
 const NavigationItems = (props) => {
-  const navItemStyle = ["navItems__item"];
+  const navItemStyle = ["navItems__item"]
   if (props.isSticky) {
-    navItemStyle.push("navItems__sticky");
+    navItemStyle.push("navItems__sticky")
   }
   return (
-    <div className="navItems">
+    <ul className="navItems">
+      <Link
+        to={"header"}
+        smooth={true}
+        duration={1500}
+        className={navItemStyle.join(" ")}
+      >
+        start
+      </Link>
+
+      <Link
+        to={"gallery"}
+        smooth={true}
+        duration={1500}
+        className={navItemStyle.join(" ")}
+      >
+        portfolio
+      </Link>
       <Link
         to={"about"}
         smooth={true}
@@ -17,30 +34,14 @@ const NavigationItems = (props) => {
         o mnie
       </Link>
       <Link
-        to={"opinions"}
-        smooth={true}
-        duration={1500}
-        className={navItemStyle.join(" ")}
-      >
-        opinie
-      </Link>
-      <Link
-        to={"gallery"}
-        smooth={true}
-        duration={1500}
-        className={navItemStyle.join(" ")}
-      >
-        galeria
-      </Link>
-      <Link
-        to={"footer"}
+        to={"contact"}
         smooth={true}
         duration={1500}
         className={navItemStyle.join(" ")}
       >
         kontakt
       </Link>
-    </div>
-  );
-};
-export default NavigationItems;
+    </ul>
+  )
+}
+export default NavigationItems
