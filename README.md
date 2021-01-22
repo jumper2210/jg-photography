@@ -11,7 +11,7 @@ Commercial project created for Justyna Garbal Photography.
 - RWD. 
 
 ### Live
-[click me](http://jg-photography.pl/)
+change of hosting provider...
 
 #### Author
 Krzysztof Skoczek
